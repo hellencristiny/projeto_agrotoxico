@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Contato </title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contato.css" />
+    <script src="js/contato.js"></script>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <section class="menu_padrao"> 
+            <h1><img src="imagens/ifmslogo.png" /></h1>
+            <br />
+            <nav class="menu2">
+                <ul>
+                    <li class="pag_ini"> <a class="link" href="agrotoxicos.html">Página Inicial</a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu">
+                <ul>
+                    <li class="item_menu"><a class="link_menu" href="quemsomos.html">Quem Somos</a></li>
+                    <li class="item_menu"><a class="link_menu" href="agrotoxicos.html" target="_blank">Agrotóxicos</a>
+                    </li>
+                    <li class="item_menu"><a class="link_menu" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+   <main>
+        <form id="formContato" action="arquivoQueReceberOsDados.js" method="POST" onsubmit="return validarCampos()">
+            <label>Nome e Sobrenome </label>
+            <input class="input_padrao" type="text" id="nomeesobrenome" required />
+
+            <label>E-mail </label>
+            <input class="input_padrao" type="email" id="email" required placeholder="seuemail@dominio.com" />
+
+            <label>Telefone </label>
+            <input class="input-padrao" type="tel" id="telefone" placeholder="XX XXXXX-XXXX" maxlength="13" required />
+
+            <label>Mensagem </label>
+            <textarea class="input_padrao" cols="70" rows="10" id="mensagem"></textarea>
+
+             <fieldset class="teste">
+                <legend> Como prefere o nosso contato? </legend>
+
+                <label for="radio_email"><input type="radio" name="contato" value="email" id="radio_email">
+                    Email</label>
+                <label for="radio_telefone"><input type="radio" name="contato" value="telefone" id="radio_telefone">
+                    Telefone</label>
+                <label for="radio_whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio_whatsapp"
+                        checked>
+                    WhatsApp</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Em qual período prefere nosso contato? </legend>
+                <select>
+                    <option> Manhã </option>
+                    <option> Tarde </option>
+                    <option> Noite </option>
+
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked> Gostaria de receber novidades por e-mail? </label>
+
+            <input type="submit" value="Enviar Formulário" class="enviar">
+        </form> 
+    </main> 
+
+    <footer class="rodape">
+        ©Aline Hirokawa, Ana Barbosa, Hellen Alves(2021).
+    </footer>
+</body>
